@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found | Md. Saifullah Al Taheri</title>
+  <meta name="robots" content="noindex" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <style>
+    .not-found {
+      min-height: 100vh;
+      display: flex; align-items: center; justify-content: center;
+      text-align: center;
+    }
+    .not-found-code {
+      font-family: var(--font-serif);
+      font-size: clamp(6rem, 20vw, 14rem);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--accent);
+      opacity: 0.3;
+      line-height: 1;
+      display: block;
+    }
+    .not-found-title {
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      margin: 0.5rem 0 1rem;
+    }
+  </style>
+</head>
+<body>
+<nav role="navigation" aria-label="Main navigation">
+  <a href="/index.html" class="nav-logo">SAT<span>.</span></a>
+  <ul class="nav-links" role="list">
+    <li><a href="/index.html">Home</a></li>
+    <li><a href="/pages/research.html">Research</a></li>
+    <li><a href="/pages/contact.html" class="nav-cta">Contact</a></li>
+  </ul>
+  <div class="hamburger" role="button" aria-label="Toggle menu" tabindex="0">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<main>
+  <div class="not-found">
+    <div>
+      <span class="not-found-code">404</span>
+      <h1 class="not-found-title">Page Not Found</h1>
+      <p style="max-width:420px; margin:0 auto 2.5rem;">
+        This page doesn't exist or has been moved. Head back to the homepage and explore from there.
+      </p>
+      <a href="/index.html" class="btn-primary">Back to Homepage</a>
+    </div>
+  </div>
+</main>
+<script src="/js/main.js"></script>
+</body>
+</html>
