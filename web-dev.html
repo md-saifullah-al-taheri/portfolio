@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Development Portfolio | Md. Saifullah Al Taheri — Web Developer Bangladesh</title>
+  <meta name="description" content="Web development projects by Md. Saifullah Al Taheri — HTML, CSS, Bootstrap, WordPress, and Shopify websites built for clients and personal projects." />
+  <meta name="keywords" content="Saifullah Al Taheri web developer, web development Bangladesh, HTML CSS developer, WordPress developer Bangladesh, Bootstrap developer, Shopify Bangladesh, freelance web developer Dhaka" />
+  <meta name="author" content="Md. Saifullah Al Taheri" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://saifullahaltaheri.github.io/pages/web-dev.html" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .project-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: var(--transition);
+    }
+    .project-card:hover { border-color: rgba(200,169,110,0.4); transform: translateY(-4px); box-shadow: var(--shadow); }
+
+    .project-preview {
+      aspect-ratio: 16/9;
+      background: var(--bg3);
+      position: relative; overflow: hidden;
+    }
+    .project-preview img { width:100%; height:100%; object-fit:cover; transition: transform 0.5s ease; }
+    .project-card:hover .project-preview img { transform: scale(1.05); }
+
+    .project-preview-placeholder {
+      width: 100%; height: 100%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2.5rem; color: var(--text-muted);
+    }
+
+    .project-body { padding: 1.5rem; }
+    .project-title { font-size: 1.05rem; color: var(--white); margin-bottom: 0.4rem; }
+    .project-desc  { font-family: var(--font-serif); font-size: 0.88rem; color: var(--text-dim); margin-bottom:1rem; }
+
+    .project-stack { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1rem; }
+    .stack-tag {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      padding: 0.2rem 0.6rem;
+      background: rgba(126,184,201,0.08);
+      border: 1px solid rgba(126,184,201,0.2);
+      color: var(--accent2);
+      border-radius: 2px;
+    }
+
+    .project-links { display: flex; gap: 0.75rem; }
+    .project-link {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.06em;
+      padding: 0.4rem 0.9rem;
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      color: var(--text-dim);
+      transition: var(--transition);
+      display: inline-flex; align-items: center; gap: 0.35rem;
+    }
+    .project-link:hover { border-color: var(--accent); color: var(--accent); }
+    .project-link.primary { border-color: var(--accent); color: var(--accent); }
+    .project-link.primary:hover { background: var(--accent); color: var(--bg); }
+  </style>
+</head>
+<body>
+
+<nav role="navigation" aria-label="Main navigation">
+  <a href="../index.html" class="nav-logo">SAT<span>.</span></a>
+  <ul class="nav-links" role="list">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="writing.html">Writing</a></li>
+    <li><a href="graphic-design.html">Design</a></li>
+    <li><a href="web-dev.html">Web Dev</a></li>
+    <li><a href="cv.html">CV</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact</a></li>
+  </ul>
+  <div class="hamburger" role="button" aria-label="Toggle menu" tabindex="0">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<main>
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="container">
+    <p class="page-hero-label">&#x2F;&#x2F; code &amp; builds</p>
+    <h1 class="page-hero-title">Web <span class="gradient-text">Development</span></h1>
+    <p class="page-hero-desc">Responsive, SEO-optimised websites built with HTML, CSS, Bootstrap, WordPress, and Shopify — combining clean code with strong UX and digital marketing strategy.</p>
+  </div>
+</section>
+
+<!-- TECH STACK BANNER -->
+<section style="background:var(--bg2); padding:2rem 0; border-bottom:1px solid var(--border);">
+  <div class="container">
+    <div style="display:flex; flex-wrap:wrap; gap:1rem; align-items:center;">
+      <span style="font-family:var(--font-mono); font-size:0.7rem; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.1em;">Stack:</span>
+      <span class="skill-tag">HTML5</span>
+      <span class="skill-tag">CSS3</span>
+      <span class="skill-tag">Bootstrap</span>
+      <span class="skill-tag">JavaScript</span>
+      <span class="skill-tag">WordPress</span>
+      <span class="skill-tag">Shopify</span>
+      <span class="skill-tag">SEO</span>
+      <span class="skill-tag">Google Analytics</span>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS GRID -->
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-label">Projects</p>
+      <h2>Web Projects</h2>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════
+         INSTRUCTION: To add web projects:
+         1. Take a screenshot of the website (1280×720px recommended)
+         2. Place it in assets/img/web/
+         3. Copy a project-card block and update:
+            - Replace <div class="project-preview-placeholder"> with <img>
+            - project-title: name of the project
+            - project-desc: 2-sentence description
+            - stack-tag: technologies used
+            - project-link href: live site URL and GitHub URL
+         ═══════════════════════════════════════════════ -->
+
+    <div class="grid-2 stagger" id="projects-grid">
+
+      <article class="project-card">
+        <div class="project-preview">
+          <!-- REPLACE with: <img src="../assets/img/web/project1.jpg" alt="Screenshot of [project name]" loading="lazy" /> -->
+          <div class="project-preview-placeholder">💻</div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">[Project Name — e.g., E-commerce Store for Local Business]</h3>
+          <p class="project-desc">[2-sentence description of what the site does and what problem it solves. Include the client or purpose.]</p>
+          <div class="project-stack">
+            <span class="stack-tag">HTML</span>
+            <span class="stack-tag">CSS</span>
+            <span class="stack-tag">Bootstrap</span>
+            <!-- Add the actual stack used -->
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-link primary" target="_blank" rel="noopener">
+              Live Site
+              <svg width="10" height="10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+            </a>
+            <a href="#" class="project-link" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-preview">
+          <!-- REPLACE with screenshot -->
+          <div class="project-preview-placeholder">🌐</div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">[Project Name — e.g., WordPress Blog for NGO]</h3>
+          <p class="project-desc">[Description of this project, what was built, and the outcome.]</p>
+          <div class="project-stack">
+            <span class="stack-tag">WordPress</span>
+            <span class="stack-tag">CSS</span>
+            <span class="stack-tag">SEO</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-link primary" target="_blank" rel="noopener">
+              Live Site
+              <svg width="10" height="10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+            </a>
+            <a href="#" class="project-link" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-preview">
+          <div class="project-preview-placeholder">🛒</div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">[Project Name — e.g., Shopify Store Setup]</h3>
+          <p class="project-desc">[Description of Shopify or e-commerce project.]</p>
+          <div class="project-stack">
+            <span class="stack-tag">Shopify</span>
+            <span class="stack-tag">Liquid</span>
+            <span class="stack-tag">SEO</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-link primary" target="_blank" rel="noopener">
+              Live Site
+              <svg width="10" height="10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+            </a>
+            <a href="#" class="project-link" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ADD MORE PROJECT CARDS HERE -->
+
+    </div>
+
+    <div style="text-align:center; padding:2.5rem; border:1px dashed var(--border); border-radius:var(--radius); margin-top:1.5rem;">
+      <p style="font-family:var(--font-mono); font-size:0.78rem; color:var(--text-muted);">
+        ✦ &nbsp; More projects being added. See my
+        <a href="#" style="color:var(--accent);" target="_blank" rel="noopener">GitHub</a>
+        for latest work. &nbsp; ✦
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- SEO & DIGITAL MARKETING -->
+<section class="section" style="background:var(--bg2);">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-label">Beyond Code</p>
+      <h2>SEO & Digital Marketing</h2>
+    </div>
+    <div class="grid-3 stagger">
+      <div class="card">
+        <div style="font-size:1.5rem; margin-bottom:0.75rem;">🔍</div>
+        <h4 style="margin-bottom:0.5rem;">On-Page SEO</h4>
+        <p style="font-size:0.88rem;">Keyword research, meta optimization, structured data (JSON-LD), semantic HTML, and content strategy for organic ranking.</p>
+      </div>
+      <div class="card">
+        <div style="font-size:1.5rem; margin-bottom:0.75rem;">📱</div>
+        <h4 style="margin-bottom:0.5rem;">Social Media Marketing</h4>
+        <p style="font-size:0.88rem;">Content strategy, social media management, and digital campaigns across Facebook, LinkedIn, and Instagram.</p>
+      </div>
+      <div class="card">
+        <div style="font-size:1.5rem; margin-bottom:0.75rem;">📊</div>
+        <h4 style="margin-bottom:0.5rem;">Analytics & Reporting</h4>
+        <p style="font-size:0.88rem;">Google Analytics setup, performance tracking, and data-driven decision making for website optimization.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">SAT.</div>
+        <p class="footer-tagline">Md. Saifullah Al Taheri — Economics Researcher &amp; Digital Creative, Dhaka, Bangladesh.</p>
+      </div>
+      <div>
+        <p class="footer-heading">Portfolio</p>
+        <ul class="footer-links">
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="writing.html">Writing</a></li>
+          <li><a href="graphic-design.html">Graphic Design</a></li>
+          <li><a href="web-dev.html">Web Dev</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-heading">More</p>
+        <ul class="footer-links">
+          <li><a href="cv.html">Download CV</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2025 Md. Saifullah Al Taheri.</span>
+      <div class="footer-socials">
+        <a href="#" class="footer-social" aria-label="LinkedIn">in</a>
+        <a href="#" class="footer-social" aria-label="GitHub">gh</a>
+        <a href="mailto:md.saifullah.taheri@gmail.com" class="footer-social" aria-label="Email">@</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+</body>
+</html>

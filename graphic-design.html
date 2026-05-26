@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Graphic Design Portfolio | Md. Saifullah Al Taheri — Designer Bangladesh</title>
+  <meta name="description" content="Graphic design portfolio of Md. Saifullah Al Taheri — social media graphics, posters, infographics, and branding created with Adobe Photoshop, Illustrator, and Canva." />
+  <meta name="keywords" content="Saifullah Al Taheri graphic design, graphic designer Bangladesh, Canva designer, Adobe Photoshop Bangladesh, social media design, poster design Bangladesh, infographic designer" />
+  <meta name="author" content="Md. Saifullah Al Taheri" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://saifullahaltaheri.github.io/pages/graphic-design.html" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    /* Filter tabs */
+    .filter-tabs {
+      display: flex; flex-wrap: wrap; gap: 0.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .filter-btn {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.45rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      background: transparent;
+      color: var(--text-dim);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .filter-btn.active,
+    .filter-btn:hover { border-color: var(--accent); color: var(--accent); background: rgba(200,169,110,0.06); }
+
+    /* Design grid items */
+    .design-item {
+      position: relative; overflow: hidden;
+      border-radius: var(--radius);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      aspect-ratio: 1;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .design-item img { width:100%; height:100%; object-fit:cover; transition: transform 0.5s ease; }
+    .design-item:hover img { transform: scale(1.08); }
+
+    .design-placeholder {
+      width:100%; height:100%;
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      background: linear-gradient(135deg, var(--bg3), var(--surface));
+      color: var(--text-muted); gap: 0.75rem;
+    }
+    .design-placeholder .emoji { font-size: 2.5rem; }
+    .design-placeholder p { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; }
+
+    .design-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(10,10,15,0.95) 0%, rgba(10,10,15,0.5) 40%, transparent 100%);
+      opacity: 0;
+      transition: var(--transition);
+      display: flex; align-items: flex-end; padding: 1.25rem;
+    }
+    .design-item:hover .design-overlay { opacity: 1; }
+    .design-info h4 { color: var(--white); font-size: 0.95rem; margin-bottom: 0.2rem; }
+    .design-info p  { font-family: var(--font-mono); font-size: 0.65rem; color: var(--text-dim); }
+
+    /* Lightbox */
+    .lightbox {
+      position: fixed; inset: 0; z-index: 9000;
+      background: rgba(0,0,0,0.92);
+      display: none; align-items: center; justify-content: center;
+      padding: 2rem;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox img { max-width: 90vw; max-height: 85vh; border-radius: var(--radius); box-shadow: var(--shadow); }
+    .lightbox-close {
+      position: fixed; top: 1.5rem; right: 1.5rem;
+      font-size: 2rem; color: var(--text-dim); cursor: pointer;
+      background: none; border: none; transition: color 0.3s;
+    }
+    .lightbox-close:hover { color: var(--accent); }
+  </style>
+</head>
+<body>
+
+<nav role="navigation" aria-label="Main navigation">
+  <a href="../index.html" class="nav-logo">SAT<span>.</span></a>
+  <ul class="nav-links" role="list">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="writing.html">Writing</a></li>
+    <li><a href="graphic-design.html">Design</a></li>
+    <li><a href="web-dev.html">Web Dev</a></li>
+    <li><a href="cv.html">CV</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact</a></li>
+  </ul>
+  <div class="hamburger" role="button" aria-label="Toggle menu" tabindex="0">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<main>
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="container">
+    <p class="page-hero-label">&#x2F;&#x2F; visual work</p>
+    <h1 class="page-hero-title">Graphic <span class="gradient-text">Design</span></h1>
+    <p class="page-hero-desc">Visual communication through Adobe Photoshop, Illustrator, Premiere Pro, and Canva — creating social media content, posters, infographics, and brand materials.</p>
+  </div>
+</section>
+
+<!-- TOOLS -->
+<section style="background:var(--bg2); padding:2rem 0; border-bottom:1px solid var(--border);">
+  <div class="container">
+    <div style="display:flex; flex-wrap:wrap; gap:1rem; align-items:center;">
+      <span style="font-family:var(--font-mono); font-size:0.7rem; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.1em;">Tools:</span>
+      <span class="skill-tag">Adobe Photoshop</span>
+      <span class="skill-tag">Adobe Illustrator</span>
+      <span class="skill-tag">Adobe Premiere Pro</span>
+      <span class="skill-tag">Canva</span>
+      <span class="skill-tag">CapCut</span>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO GRID -->
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-label">Portfolio</p>
+      <h2>Design Work</h2>
+    </div>
+
+    <!-- Filter tabs -->
+    <div class="filter-tabs reveal" role="tablist" aria-label="Filter designs by category">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="social">Social Media</button>
+      <button class="filter-btn" data-filter="poster">Posters</button>
+      <button class="filter-btn" data-filter="infographic">Infographics</button>
+      <button class="filter-btn" data-filter="branding">Branding</button>
+      <button class="filter-btn" data-filter="event">Event Materials</button>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════
+         INSTRUCTION: To add your design samples:
+         1. Place your image files in assets/img/design/
+         2. Replace the <div class="design-placeholder"> blocks
+            with: <img src="../assets/img/design/your-file.jpg" alt="Description of the design" loading="lazy" />
+         3. Update data-category to match filter buttons:
+            social | poster | infographic | branding | event
+         4. Update the title and tool in .design-info
+         ═══════════════════════════════════════════════ -->
+
+    <div class="portfolio-grid reveal" id="design-grid">
+
+      <div class="design-item" data-category="social">
+        <div class="design-placeholder">
+          <span class="emoji">🎨</span>
+          <!-- REPLACE: <img src="../assets/img/design/social-1.jpg" alt="Social media graphic" loading="lazy" /> -->
+          <p>Social Media</p>
+        </div>
+        <div class="design-overlay">
+          <div class="design-info">
+            <h4>[Post Title]</h4>
+            <p>Social Media &nbsp;·&nbsp; Canva / Photoshop</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="design-item" data-category="poster">
+        <div class="design-placeholder">
+          <span class="emoji">📋</span>
+          <!-- REPLACE with your poster image -->
+          <p>Poster</p>
+        </div>
+        <div class="design-overlay">
+          <div class="design-info">
+            <h4>[Poster Title]</h4>
+            <p>Poster Design &nbsp;·&nbsp; Adobe Illustrator</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="design-item" data-category="infographic">
+        <div class="design-placeholder">
+          <span class="emoji">📊</span>
+          <!-- REPLACE with your infographic image -->
+          <p>Infographic</p>
+        </div>
+        <div class="design-overlay">
+          <div class="design-info">
+            <h4>[Infographic Title]</h4>
+            <p>Infographic &nbsp;·&nbsp; Canva / Illustrator</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="design-item" data-category="event">
+        <div class="design-placeholder">
+          <span class="emoji">🎪</span>
+          <!-- REPLACE with your event material image -->
+          <p>Event Material</p>
+        </div>
+        <div class="design-overlay">
+          <div class="design-info">
+            <h4>[Event Material Title]</h4>
+            <p>Event Design &nbsp;·&nbsp; Photoshop</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="design-item" data-category="branding">
+        <div class="design-placeholder">
+          <span class="emoji">✦</span>
+          <!-- REPLACE with your branding work image -->
+          <p>Branding</p>
+        </div>
+        <div class="design-overlay">
+          <div class="design-info">
+            <h4>[Brand Asset Title]</h4>
+            <p>Branding &nbsp;·&nbsp; Illustrator</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="design-item" data-category="social">
+        <div class="design-placeholder">
+          <span class="emoji">📱</span>
+          <!-- REPLACE with your social media image -->
+          <p>Social Media</p>
+        </div>
+        <div class="design-overlay">
+          <div class="design-info">
+            <h4>[Post Title]</h4>
+            <p>Social Media &nbsp;·&nbsp; Canva</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ADD MORE ITEMS FOLLOWING THE SAME PATTERN -->
+
+    </div>
+
+    <!-- Instruction box -->
+    <div class="upload-area" style="margin-top:2rem; border:2px dashed var(--border); border-radius:var(--radius); padding:2.5rem; text-align:center;" role="note">
+      <p style="font-size:1.5rem; margin-bottom:0.75rem;">🖼️</p>
+      <h4 style="color:var(--text-dim); margin-bottom:0.5rem;">Add Your Design Samples</h4>
+      <p style="font-family:var(--font-mono); font-size:0.75rem; color:var(--text-muted); max-width:450px; margin:0 auto;">
+        Upload your images to <code style="color:var(--accent);">assets/img/design/</code> and replace the placeholder blocks with <code style="color:var(--accent);">&lt;img&gt;</code> tags in this file.
+      </p>
+    </div>
+
+  </div>
+</section>
+</main>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image preview">
+  <button class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
+  <img id="lightbox-img" src="" alt="" />
+</div>
+
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">SAT.</div>
+        <p class="footer-tagline">Md. Saifullah Al Taheri — Economics Researcher &amp; Digital Creative, Dhaka, Bangladesh.</p>
+      </div>
+      <div>
+        <p class="footer-heading">Portfolio</p>
+        <ul class="footer-links">
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="writing.html">Writing</a></li>
+          <li><a href="graphic-design.html">Graphic Design</a></li>
+          <li><a href="web-dev.html">Web Dev</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-heading">More</p>
+        <ul class="footer-links">
+          <li><a href="cv.html">Download CV</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2025 Md. Saifullah Al Taheri.</span>
+      <div class="footer-socials">
+        <a href="#" class="footer-social" aria-label="LinkedIn">in</a>
+        <a href="#" class="footer-social" aria-label="GitHub">gh</a>
+        <a href="mailto:md.saifullah.taheri@gmail.com" class="footer-social" aria-label="Email">@</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+<script>
+  // Filter tabs
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      document.querySelectorAll('.design-item').forEach(item => {
+        const match = filter === 'all' || item.dataset.category === filter;
+        item.style.opacity    = match ? '1' : '0.25';
+        item.style.transform  = match ? 'scale(1)' : 'scale(0.95)';
+        item.style.pointerEvents = match ? 'auto' : 'none';
+      });
+    });
+  });
+
+  // Lightbox — only triggers on items with real images
+  document.querySelectorAll('.design-item').forEach(item => {
+    item.addEventListener('click', () => {
+      const img = item.querySelector('img');
+      if (!img) return;
+      document.getElementById('lightbox-img').src = img.src;
+      document.getElementById('lightbox-img').alt = img.alt;
+      document.getElementById('lightbox').classList.add('open');
+    });
+  });
+  document.getElementById('lightbox-close').addEventListener('click', () => {
+    document.getElementById('lightbox').classList.remove('open');
+  });
+  document.getElementById('lightbox').addEventListener('click', e => {
+    if (e.target === e.currentTarget) e.currentTarget.classList.remove('open');
+  });
+</script>
+</body>
+</html>
